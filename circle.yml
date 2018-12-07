@@ -22,7 +22,7 @@ jobs:
 
       - run:
           name: Build Project
-          command: ./scripts/ci_assemble.sh
+          command: bash ./scripts/ci_assemble.sh
 
       - save_cache:
           paths:
@@ -48,7 +48,7 @@ jobs:
 
       - run:
           name: Run Quality Checks
-          command: ./scripts/ci_quality.sh
+          command: bash ./scripts/ci_quality.sh
 
       - store_artifacts:
           path: app/build/reports

@@ -1,7 +1,7 @@
 package com.adambennett.template
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.adambennett.template.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {

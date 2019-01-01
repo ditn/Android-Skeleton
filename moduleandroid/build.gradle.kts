@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     kotlin("android")
     kotlin("android.extensions")
 }
@@ -9,7 +9,6 @@ apply(from = "../quality/ktlint.gradle.kts")
 android {
     compileSdkVersion(Versions.compileSdk)
     defaultConfig {
-        applicationId = Versions.applicationId
         minSdkVersion(Versions.minSdk)
         targetSdkVersion(Versions.targetSdk)
         versionCode = Versions.releaseCode
@@ -17,29 +16,17 @@ android {
         testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
-        }
-    }
-    packagingOptions.exclude("META-INF/main.kotlin_module")
 }
 
 dependencies {
-    implementation(project(":moduleKotlin"))
-    implementation(project(":moduleAndroid"))
-
-    implementation(Libraries.kotlin)
     implementation(Libraries.appCompat)
-    implementation(Libraries.constraintLayout)
-    implementation(Libraries.lifecycleExtensions)
 
     testImplementation(Libraries.kotlinJunit)
     testImplementation(Libraries.kluent)
     testImplementation(Libraries.mockitoKotlin)
 
     androidTestImplementation(Libraries.testRunner)
+    androidTestImplementation(Libraries.testMonitor)
     androidTestImplementation(Libraries.testRules)
     androidTestImplementation(Libraries.testJunit)
     androidTestImplementation(Libraries.espressoCore)

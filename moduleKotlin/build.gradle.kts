@@ -5,9 +5,6 @@ plugins {
 apply(from = "../quality/ktlint.gradle.kts")
 
 buildscript {
-    repositories {
-        mavenCentral()
-    }
     dependencies {
         classpath(Libraries.kotlinGradlePlugin)
     }
@@ -23,7 +20,6 @@ dependencies {
 
     testImplementation(Libraries.kotlinJunit)
     testImplementation(Libraries.mockitoKotlin)
-    testImplementation(Libraries.json)
     testImplementation(Libraries.kluent)
 }
 

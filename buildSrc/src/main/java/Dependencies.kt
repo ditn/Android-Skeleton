@@ -1,3 +1,5 @@
+import org.gradle.api.JavaVersion
+
 object Versions {
 
     // Release info

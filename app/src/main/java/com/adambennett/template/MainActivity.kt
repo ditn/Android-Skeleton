@@ -2,6 +2,7 @@ package com.adambennett.template
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.adambennett.modulekotlin.KotlinModuleClass
 import com.adambennett.template.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
@@ -14,5 +15,8 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.container, MainFragment.newInstance())
                 .commitNow()
         }
+
+        // Ensure module dependencies are working
+        KotlinModuleClass()
     }
 }

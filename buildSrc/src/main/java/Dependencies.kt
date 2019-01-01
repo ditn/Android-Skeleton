@@ -9,7 +9,7 @@ object Versions {
     const val releaseName = "0.0.1"
 
     // Build tools and languages
-    const val androidPlugin = "3.4.0-alpha07"
+    const val androidPlugin = "3.4.0-alpha09"
     const val kotlin = "1.3.11"
     const val googleServicesPlugin = "4.0.1"
     const val coveralls = "2.8.2"
@@ -25,7 +25,7 @@ object Versions {
 
     // AndroidX
     const val appCompat = "1.0.0"
-    const val design = "1.0.0-rc01"
+    const val design = "1.1.0-alpha02"
     const val recyclerView = "1.0.0"
     const val cardView = "1.0.0"
     const val constraintLayout = "1.1.2"
@@ -34,6 +34,11 @@ object Versions {
     const val multidex = "2.0.0"
     const val dynamicAnims = "1.0.0"
     const val room = "2.0.0-rc01"
+
+    // KTX
+    const val ktxCore = "1.0.0"
+    const val ktxFragments = "1.0.0"
+    const val ktxViewModel = "2.0.0"
 
     // Networking, RxJava
     const val retrofit = "2.4.0"
@@ -106,6 +111,11 @@ object Libraries {
     const val roomTesting = "androidx.room:room-testing:${Versions.room}"
     const val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
 
+    // KTX
+    const val ktxCore = "androidx.core:core-ktx:${Versions.ktxCore}"
+    const val ktxFragments = "androidx.fragment:fragment-ktx:${Versions.ktxFragments}"
+    const val ktxViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.ktxViewModel}"
+
     // Google & Firebase
     const val firebaseCore = "com.google.firebase:firebase-core:${Versions.firebaseCore}"
     const val firebaseMessaging = "com.google.firebase:firebase-messaging:${Versions.firebaseMessaging}"
@@ -153,7 +163,7 @@ object Libraries {
     const val robolectric = "org.robolectric:robolectric:${Versions.robolectric}"
     const val json = "org.json:json:${Versions.json}"
     const val testRules = "androidx.test:rules:${Versions.testRunner}"
-    const val testRunner = "androidx.test:runner:${Versions.testRunner}"
+    const val testRunner = "androidx.test.ext:junit:${Versions.testRunner}"
     const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espresso}"
     const val okHttpMock = "com.squareup.okhttp3:mockwebserver:${Versions.okHttp}"
     const val jacoco = "org.jacoco:org.jacoco.core:${Versions.jacoco}"

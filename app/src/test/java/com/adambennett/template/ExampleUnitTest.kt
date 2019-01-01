@@ -1,6 +1,6 @@
 package com.adambennett.template
 
-import org.junit.Assert.assertEquals
+import org.amshove.kluent.`should equal to`
 import org.junit.Test
 
 /**
@@ -9,8 +9,9 @@ import org.junit.Test
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class ExampleUnitTest {
+
     @Test
     fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+        2 + 2 `should equal to` 4
     }
 }

@@ -31,7 +31,10 @@ dependencies {
     implementation(Libraries.constraintLayout)
     implementation(Libraries.lifecycleExtensions)
 
-    testImplementation(Libraries.junit)
+    testImplementation(Libraries.kotlinJunit)
+    testImplementation(Libraries.kluent)
+    testImplementation(Libraries.mockitoKotlin)
+
     androidTestImplementation(Libraries.testRunner)
     androidTestImplementation(Libraries.testRules)
     androidTestImplementation(Libraries.espressoCore)

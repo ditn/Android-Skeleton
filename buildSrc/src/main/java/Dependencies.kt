@@ -134,8 +134,8 @@ object Libraries {
     const val moshiKotlin = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
     const val rxKotlin = "io.reactivex.rxjava2:rxkotlin:${Versions.rxKotlin}"
     const val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid}"
-    const val rxBindingV4 = "com.jakewharton.rxbinding2:rxbinding-support-v4:${Versions.rxBinding}"
-    const val rxBindingV7 = "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:${Versions.rxBinding}"
+    const val rxBindingV4 = "com.jakewharton.rxbinding2:rxbinding-support-v4-kotlin:${Versions.rxBinding}"
+    const val rxBindingV7 = "com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:${Versions.rxBinding}"
     const val rxFingerprint = "com.mtramin:rxfingerprint:${Versions.rxFingerprint}"
 
     // Injection

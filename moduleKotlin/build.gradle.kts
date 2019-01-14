@@ -2,7 +2,7 @@ plugins {
     kotlin("jvm")
 }
 
-apply(from = "../quality/ktlint.gradle.kts")
+apply(from = "$rootDir/quality/ktlint.gradle.kts")
 
 buildscript {
     dependencies {
@@ -18,6 +18,7 @@ java {
 dependencies {
     implementation(Libraries.kotlin)
 
+    testImplementation(project(":testutils"))
     testImplementation(Libraries.kotlinJunit)
     testImplementation(Libraries.mockitoKotlin)
     testImplementation(Libraries.kluent)

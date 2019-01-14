@@ -1,5 +1,3 @@
-import org.gradle.api.JavaVersion
-
 object Versions {
 
     // Release info
@@ -11,7 +9,7 @@ object Versions {
     const val releaseName = "0.0.1"
 
     // Build tools and languages
-    const val androidPlugin = "3.4.0-alpha09"
+    const val androidPlugin = "3.4.0-alpha10"
     const val kotlin = "1.3.11"
     const val googleServicesPlugin = "4.0.1"
     const val coveralls = "2.8.2"
@@ -30,7 +28,7 @@ object Versions {
     const val design = "1.1.0-alpha02"
     const val recyclerView = "1.0.0"
     const val cardView = "1.0.0"
-    const val constraintLayout = "1.1.2"
+    const val constraintLayout = "2.0.0-alpha2"
     const val lifecycle = "2.0.0-rc01"
     const val annotations = "1.0.0"
     const val multidex = "2.0.0"
@@ -46,7 +44,7 @@ object Versions {
     const val retrofit = "2.4.0"
     const val okHttp = "3.10.0"
     const val okIo = "1.14.1"
-    const val moshi = "1.6.0"
+    const val moshi = "1.8.0"
     const val rxKotlin = "2.2.0"
     const val rxAndroid = "2.0.2"
     const val rxBinding = "2.1.1"
@@ -132,6 +130,7 @@ object Libraries {
     const val okIo = "com.squareup.okio:okio:${Versions.okIo}"
     const val moshi = "com.squareup.moshi:moshi:${Versions.moshi}"
     const val moshiKotlin = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
+    const val moshiKotlinCodeGen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}"
     const val rxKotlin = "io.reactivex.rxjava2:rxkotlin:${Versions.rxKotlin}"
     const val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid}"
     const val rxBindingV4 = "com.jakewharton.rxbinding2:rxbinding-support-v4-kotlin:${Versions.rxBinding}"
@@ -141,7 +140,8 @@ object Libraries {
     // Injection
     const val dagger = "com.google.dagger:dagger:${Versions.dagger}"
     const val daggerKapt = "com.google.dagger:dagger-compiler:${Versions.dagger}"
-    const val koin = "org.koin:koin-android:${Versions.koin}"
+    const val koin = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
+    const val koinTest = "org.koin:koin-test:${Versions.koin}"
 
     // Utils
     const val commonsCodec = "commons-codec:commons-codec:${Versions.commonsCodec}"

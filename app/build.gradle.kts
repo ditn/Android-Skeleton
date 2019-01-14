@@ -4,7 +4,7 @@ plugins {
     kotlin("android.extensions")
 }
 
-apply(from = "../quality/ktlint.gradle.kts")
+apply(from = "$rootDir/quality/ktlint.gradle.kts")
 
 android {
     compileSdkVersion(Versions.compileSdk)
@@ -35,6 +35,8 @@ dependencies {
     implementation(Libraries.constraintLayout)
     implementation(Libraries.lifecycleExtensions)
 
+    testImplementation(project(":testutils"))
+    testImplementation(project(":testutils-android"))
     testImplementation(Libraries.kotlinJunit)
     testImplementation(Libraries.kluent)
     testImplementation(Libraries.mockitoKotlin)

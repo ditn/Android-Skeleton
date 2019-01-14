@@ -16,20 +16,26 @@ android {
         testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
+    lintOptions {
+        isAbortOnError = false
+    }
 }
 
 dependencies {
-    implementation(Libraries.appCompat)
-
-    testImplementation(project(":testutils"))
-    testImplementation(project(":testutils-android"))
-    testImplementation(Libraries.kotlinJunit)
-    testImplementation(Libraries.kluent)
-    testImplementation(Libraries.mockitoKotlin)
-
-    androidTestImplementation(Libraries.testRunner)
-    androidTestImplementation(Libraries.testMonitor)
-    androidTestImplementation(Libraries.testRules)
-    androidTestImplementation(Libraries.testJunit)
-    androidTestImplementation(Libraries.espressoCore)
+    api(project(":testutils"))
+    // RxJava
+    api(Libraries.rxKotlin)
+    api(Libraries.rxAndroid)
+    // Networking
+    api(Libraries.okHttpMock)
+    api(Libraries.retrofit)
+    api(Libraries.moshi)
+    api(Libraries.retrofitRxMoshiConverter)
+    api(Libraries.retrofitRxJavaAdapter)
+    // Injection
+    api(Libraries.koinTest)
+    api(Libraries.dagger)
+    // Unit Test dependencies
+    api(Libraries.kotlinJunit)
+    api(Libraries.kluent)
 }

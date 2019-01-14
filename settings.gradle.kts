@@ -1,3 +1,3 @@
 rootProject.buildFileName = "build.gradle.kts"
 
-include(":app", ":moduleKotlin", ":moduleAndroid")
+include(":app", ":moduleKotlin", ":moduleAndroid", ":testutils", ":testutils-android")

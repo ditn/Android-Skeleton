@@ -9,7 +9,7 @@ import org.amshove.kluent.`should be`
 import org.amshove.kluent.`should not be`
 import org.junit.Test
 
-class RxInitAndroidAndroidTest {
+class RxInitAndroidTest {
 
     @Test
     fun `can set io trampoline`() {

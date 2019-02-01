@@ -1,3 +1,5 @@
+import org.gradle.internal.impldep.com.amazonaws.PredefinedClientConfigurations.defaultConfig
+
 plugins {
     id("com.android.library")
     kotlin("android")
@@ -23,6 +25,8 @@ android {
 
 dependencies {
     api(project(":testutils"))
+    // Android
+    api(Libraries.lifecycleExtensions)
     // RxJava
     api(Libraries.rxKotlin)
     api(Libraries.rxAndroid)

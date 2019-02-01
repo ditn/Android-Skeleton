@@ -19,7 +19,10 @@ android {
 }
 
 dependencies {
+    implementation(Libraries.kotlin)
     implementation(Libraries.appCompat)
+    implementation(Libraries.rxKotlin)
+    implementation(Libraries.rxJava)
 
     testImplementation(project(":testutils"))
     testImplementation(project(":testutils-android"))

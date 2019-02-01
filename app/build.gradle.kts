@@ -31,6 +31,7 @@ dependencies {
     implementation(project(":moduleAndroid"))
 
     implementation(Libraries.kotlin)
+    implementation(Libraries.rxKotlin)
     implementation(Libraries.appCompat)
     implementation(Libraries.activity)
     implementation(Libraries.constraintLayout)

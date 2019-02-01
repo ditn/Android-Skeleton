@@ -9,8 +9,8 @@ object Versions {
     const val releaseName = "0.0.1"
 
     // Build tools and languages
-    const val androidPlugin = "3.4.0-alpha10"
-    const val kotlin = "1.3.11"
+    const val androidPlugin = "3.5.0-alpha03"
+    const val kotlin = "1.3.20"
     const val googleServicesPlugin = "4.0.1"
     const val coveralls = "2.8.2"
     const val buildProperties = "0.4"
@@ -24,6 +24,7 @@ object Versions {
     const val firebaseCore = "16.0.1"
 
     // AndroidX
+    const val activity = "1.0.0-alpha04"
     const val appCompat = "1.0.0"
     const val design = "1.1.0-alpha02"
     const val recyclerView = "1.0.0"
@@ -92,6 +93,7 @@ object Libraries {
     const val ktlint = "com.github.shyiko:ktlint:${Versions.ktlint}"
 
     // AndroidX
+    const val activity = "androidx.activity:activity:${Versions.activity}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val design = "com.google.android.material:material:${Versions.design}"
     const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"

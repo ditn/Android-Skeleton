@@ -32,6 +32,7 @@ dependencies {
 
     implementation(Libraries.kotlin)
     implementation(Libraries.appCompat)
+    implementation(Libraries.activity)
     implementation(Libraries.constraintLayout)
     implementation(Libraries.lifecycleExtensions)
 

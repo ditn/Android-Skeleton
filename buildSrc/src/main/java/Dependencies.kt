@@ -9,9 +9,9 @@ object Versions {
     const val releaseName = "0.0.1"
 
     // Build tools and languages
-    const val androidPlugin = "3.5.0-alpha03"
+    const val androidPlugin = "3.5.0-alpha12"
     const val kotlin = "1.3.20"
-    const val googleServicesPlugin = "4.0.1"
+    const val googleServicesPlugin = "4.2.0"
     const val coveralls = "2.8.2"
     const val buildProperties = "0.4"
     const val ktlint = "0.29.0"
@@ -24,37 +24,37 @@ object Versions {
     const val firebaseCore = "16.0.1"
 
     // AndroidX
-    const val activity = "1.0.0-alpha04"
-    const val appCompat = "1.0.0"
-    const val design = "1.1.0-alpha02"
+    const val activity = "1.0.0-alpha06"
+    const val appCompat = "1.1.0-alpha04"
+    const val design = "1.1.0-alpha05"
     const val recyclerView = "1.0.0"
     const val cardView = "1.0.0"
     const val constraintLayout = "2.0.0-alpha2"
     const val lifecycle = "2.0.0-rc01"
-    const val annotations = "1.0.0"
+    const val annotations = "1.1.0-beta01"
     const val multidex = "2.0.0"
     const val dynamicAnims = "1.0.0"
     const val room = "2.0.0-rc01"
 
     // KTX
-    const val ktxCore = "1.0.0"
-    const val ktxFragments = "1.0.0"
-    const val ktxViewModel = "2.0.0"
+    const val ktxCore = "1.1.0-alpha05"
+    const val ktxFragments = "1.1.0-alpha06"
+    const val ktxViewModel = "2.1.0-alpha04"
 
     // Networking, RxJava
     const val retrofit = "2.4.0"
     const val okHttp = "3.10.0"
     const val okIo = "1.14.1"
     const val moshi = "1.8.0"
-    const val rxJava = "2.2.6"
-    const val rxKotlin = "2.2.0"
+    const val rxJava = "2.2.8"
+    const val rxKotlin = "2.3.0"
     const val rxAndroid = "2.0.2"
     const val rxBinding = "2.1.1"
     const val rxFingerprint = "2.2.1"
 
     // Injection
     const val dagger = "2.16"
-    const val koin = "1.0.2"
+    const val koin = "2.0.0-rc-2"
 
     // Utils, Ethereum
     const val commonsCodec = "1.3"
@@ -70,15 +70,16 @@ object Versions {
     const val fabricTools = "1.24.4"
 
     // Testing
-    const val mockito = "2.10.0"
-    const val mockitoKotlin = "1.5.0"
-    const val kluent = "1.19"
+    const val mockito = "2.27.0"
+    const val mockitoKotlin = "2.1.0"
+    const val kluent = "1.4"
     const val junit = "4.12"
     const val robolectric = "3.8"
     const val json = "20140107"
-    const val espresso = "3.1.0"
+    const val espresso = "3.2.0-alpha04"
     const val jacoco = "0.8.1"
-    const val testRunner = "1.1.0"
+    const val testRunner = "1.2.0-alpha04"
+    const val textJunit = "1.1.1-alpha04"
 }
 
 object Libraries {
@@ -94,7 +95,7 @@ object Libraries {
     const val ktlint = "com.github.shyiko:ktlint:${Versions.ktlint}"
 
     // AndroidX
-    const val activity = "androidx.activity:activity:${Versions.activity}"
+    const val activity = "androidx.activity:activity-ktx:${Versions.activity}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val design = "com.google.android.material:material:${Versions.design}"
     const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
@@ -162,7 +163,7 @@ object Libraries {
 
     // Testing
     const val mockito = "org.mockito:mockito-core:${Versions.mockito}"
-    const val mockitoKotlin = "com.nhaarman:mockito-kotlin:${Versions.mockitoKotlin}"
+    const val mockitoKotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockitoKotlin}"
     const val kluent = "org.amshove.kluent:kluent:${Versions.kluent}"
     const val kotlinJunit = "org.jetbrains.kotlin:kotlin-test-junit:${Versions.kotlin}"
     const val junit = "junit:junit:${Versions.junit}"
@@ -170,7 +171,7 @@ object Libraries {
     const val json = "org.json:json:${Versions.json}"
     const val testRules = "androidx.test:rules:${Versions.testRunner}"
     const val testRunner = "androidx.test:runner:${Versions.testRunner}"
-    const val testJunit = "androidx.test.ext:junit:${Versions.testRunner}"
+    const val testJunit = "androidx.test.ext:junit-ktx:${Versions.textJunit}"
     const val testMonitor = "androidx.test:monitor:${Versions.testRunner}"
     const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espresso}"
     const val okHttpMock = "com.squareup.okhttp3:mockwebserver:${Versions.okHttp}"

@@ -36,6 +36,7 @@ dependencies {
     implementation(Libraries.activity)
     implementation(Libraries.constraintLayout)
     implementation(Libraries.lifecycleExtensions)
+    implementation(Libraries.ktxFragments)
 
     testImplementation(project(":testutils"))
     testImplementation(project(":testutils-android"))

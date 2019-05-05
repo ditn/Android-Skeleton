@@ -2,6 +2,7 @@ package com.adambennett.testutils.testrules
 
 import org.amshove.kluent.mock
 import org.junit.rules.TestRule
+import org.junit.runner.Description
 import org.junit.runners.model.Statement
 
 fun TestRule.runRule(statement: () -> Unit) {
@@ -11,6 +12,6 @@ fun TestRule.runRule(statement: () -> Unit) {
                 statement()
             }
         },
-        mock()
+        mock(Description::class)
     ).evaluate()
 }

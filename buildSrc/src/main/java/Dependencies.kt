@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 object Versions {
 
     // Release info
@@ -9,12 +11,12 @@ object Versions {
     const val releaseName = "0.0.1"
 
     // Build tools and languages
-    const val androidPlugin = "3.5.0-alpha12"
-    const val kotlin = "1.3.20"
+    const val androidPlugin = "3.5.0-alpha13"
+    const val kotlin = "1.3.31"
     const val googleServicesPlugin = "4.2.0"
     const val coveralls = "2.8.2"
     const val buildProperties = "0.4"
-    const val ktlint = "0.29.0"
+    const val ktlint = "0.32.0"
     const val kotlinJvmTarget = "1.6"
     const val javaCompatibilityVersion = 1.7
 
@@ -56,7 +58,7 @@ object Versions {
     const val dagger = "2.16"
     const val koin = "2.0.0-rc-2"
 
-    // Utils, Ethereum
+    // Utils
     const val commonsCodec = "1.3"
     const val commonsLang = "3.4"
     const val commonsCli = "1.3"
@@ -92,7 +94,7 @@ object Libraries {
     const val coveralls = "org.kt3k.gradle.plugin:coveralls-gradle-plugin:${Versions.coveralls}"
     const val googleServicesPlugin = "com.google.gms:google-services:${Versions.googleServicesPlugin}"
     const val buildProperties = "com.novoda:gradle-build-properties-plugin:${Versions.buildProperties}"
-    const val ktlint = "com.github.shyiko:ktlint:${Versions.ktlint}"
+    const val ktlint = "com.pinterest:ktlint:${Versions.ktlint}"
 
     // AndroidX
     const val activity = "androidx.activity:activity-ktx:${Versions.activity}"

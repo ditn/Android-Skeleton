@@ -11,12 +11,12 @@ object Versions {
     const val releaseName = "0.0.1"
 
     // Build tools and languages
-    const val androidPlugin = "3.5.0-alpha13"
-    const val kotlin = "1.3.31"
+    const val androidPlugin = "3.6.0-alpha07"
+    const val kotlin = "1.3.50"
     const val googleServicesPlugin = "4.2.0"
     const val coveralls = "2.8.2"
     const val buildProperties = "0.4"
-    const val ktlint = "0.32.0"
+    const val ktlint = "0.34.0"
     const val kotlinJvmTarget = "1.6"
     const val javaCompatibilityVersion = 1.7
 
@@ -26,8 +26,8 @@ object Versions {
     const val firebaseCore = "16.0.1"
 
     // AndroidX
-    const val activity = "1.0.0-alpha06"
-    const val appCompat = "1.1.0-alpha04"
+    const val activity = "1.1.0-rc01"
+    const val appCompat = "1.1.0-rc01"
     const val design = "1.1.0-alpha05"
     const val recyclerView = "1.0.0"
     const val cardView = "1.0.0"
@@ -40,7 +40,8 @@ object Versions {
 
     // KTX
     const val ktxCore = "1.1.0-alpha05"
-    const val ktxFragments = "1.1.0-alpha06"
+    const val ktxFragments = "1.1.0-rc04"
+    const val ktxActivity = "1.0.0-rc01"
     const val ktxViewModel = "2.1.0-alpha04"
 
     // Networking, RxJava
@@ -97,7 +98,6 @@ object Libraries {
     const val ktlint = "com.pinterest:ktlint:${Versions.ktlint}"
 
     // AndroidX
-    const val activity = "androidx.activity:activity-ktx:${Versions.activity}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val design = "com.google.android.material:material:${Versions.design}"
     const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
@@ -120,6 +120,7 @@ object Libraries {
     // KTX
     const val ktxCore = "androidx.core:core-ktx:${Versions.ktxCore}"
     const val ktxFragments = "androidx.fragment:fragment-ktx:${Versions.ktxFragments}"
+    const val ktxActivity = "androidx.activity:activity-ktx:${Versions.ktxActivity}"
     const val ktxViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.ktxViewModel}"
 
     // Google & Firebase

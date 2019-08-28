@@ -33,9 +33,9 @@ dependencies {
     implementation(Libraries.kotlin)
     implementation(Libraries.rxKotlin)
     implementation(Libraries.appCompat)
-    implementation(Libraries.activity)
     implementation(Libraries.constraintLayout)
     implementation(Libraries.lifecycleExtensions)
+    implementation(Libraries.ktxActivity)
     implementation(Libraries.ktxFragments)
 
     testImplementation(project(":testutils"))

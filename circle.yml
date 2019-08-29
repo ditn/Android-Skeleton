@@ -79,11 +79,11 @@ workflows:
     jobs:
       - check
       - build:
-          - requires:
-              - check
+          requires:
+            - check
       - test:
-          - requires:
-              - build
+          requires:
+            - build
 
 notify:
   webhooks:

@@ -1,9 +1,25 @@
-version: 2
+version: 2.1
 jobs:
+  check:
+    resource_class: large
+    docker:
+      - image: circleci/android:api-28
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - gradle-{{ checksum "build.gradle.kts" }}-{{ checksum "app/build.gradle.kts" }}
+            - gradle-
+
+      - run:
+          name: Run Quality Checks
+          command: bash ./scripts/ci_quality.sh
+
+
   build:
     resource_class: large
     docker:
-      - image: circleci/android:api-28-alpha
+      - image: circleci/android:api-28
     environment:
       _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap
     steps:
@@ -34,11 +50,11 @@ jobs:
           paths:
             - ~/.android/build-cache
             - ~/.android/cache
-
-  checks:
+            -
+  test:
     resource_class: large
     docker:
-      - image: circleci/android:api-28-alpha
+      - image: circleci/android:api-28
     steps:
       - checkout
       - restore_cache:
@@ -48,7 +64,7 @@ jobs:
 
       - run:
           name: Run Quality Checks
-          command: bash ./scripts/ci_quality.sh
+          command: bash ./scripts/ci_test.sh
 
       - store_artifacts:
           path: app/build/reports
@@ -60,8 +76,9 @@ workflows:
   version: 2
   build_and_test:
     jobs:
+      - check
       - build
-      - checks
+      - test
 
 notify:
   webhooks:

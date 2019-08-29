@@ -19,7 +19,6 @@ android {
 }
 
 dependencies {
-    implementation(Libraries.kotlin)
     implementation(Libraries.appCompat)
     implementation(Libraries.rxKotlin)
     implementation(Libraries.rxJava)

@@ -1,5 +1,3 @@
-import org.gradle.internal.impldep.com.amazonaws.PredefinedClientConfigurations.defaultConfig
-
 plugins {
     id("com.android.library")
     kotlin("android")
@@ -38,7 +36,6 @@ dependencies {
     api(Libraries.retrofitRxJavaAdapter)
     // Injection
     api(Libraries.koinTest)
-    api(Libraries.dagger)
     // Unit Test dependencies
     api(Libraries.kotlinJunit)
     api(Libraries.kluent)

@@ -1,6 +1,6 @@
 package com.adambennett.template
 
-import org.amshove.kluent.`should equal to`
+import org.amshove.kluent.`should equal`
 import org.junit.Test
 
 /**
@@ -12,6 +12,6 @@ class ExampleUnitTest {
 
     @Test
     fun addition_isCorrect() {
-        2 + 2 `should equal to` 4
+        2 + 2 `should equal` 4
     }
 }

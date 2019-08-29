@@ -4,7 +4,7 @@ import com.adambennett.testutils.rxjava.lifecycle.TestLifecycleOwner
 import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.plusAssign
-import org.amshove.kluent.`should equal to`
+import org.amshove.kluent.`should equal`
 import org.junit.Test
 
 class LifecycleCompositeDisposableTest {
@@ -18,7 +18,7 @@ class LifecycleCompositeDisposableTest {
             Observable.empty<Any>()
                 .subscribe()
 
-        disposable.size() `should equal to` 1
+        disposable.size() `should equal` 1
     }
 
     @Test
@@ -28,11 +28,11 @@ class LifecycleCompositeDisposableTest {
             Observable.empty<Any>()
                 .subscribe()
 
-        disposable.size() `should equal to` 1
+        disposable.size() `should equal` 1
 
         lifeCycleOwner.onCreate()
         lifeCycleOwner.onDestroy()
 
-        disposable.size() `should equal to` 0
+        disposable.size() `should equal` 0
     }
 }

@@ -4,8 +4,6 @@ plugins {
     kotlin("android.extensions")
 }
 
-apply(from = "$rootDir/quality/ktlint.gradle.kts")
-
 android {
     compileSdkVersion(Versions.compileSdk)
     defaultConfig {
@@ -30,7 +28,6 @@ dependencies {
     implementation(project(":moduleKotlin"))
     implementation(project(":moduleAndroid"))
 
-    implementation(Libraries.kotlin)
     implementation(Libraries.rxKotlin)
     implementation(Libraries.appCompat)
     implementation(Libraries.constraintLayout)

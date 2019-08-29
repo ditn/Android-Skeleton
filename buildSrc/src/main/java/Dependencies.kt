@@ -4,9 +4,9 @@ object Versions {
 
     // Release info
     const val applicationId = "com.adambennett.template"
-    const val minSdk = 21
-    const val targetSdk = 28
-    const val compileSdk = 28
+    const val minSdk = 24
+    const val targetSdk = 29
+    const val compileSdk = 29
     const val releaseCode = 1
     const val releaseName = "0.0.1"
 
@@ -18,7 +18,7 @@ object Versions {
     const val buildProperties = "0.4"
     const val ktlint = "0.34.0"
     const val kotlinJvmTarget = "1.6"
-    const val javaCompatibilityVersion = 1.7
+    const val javaCompatibilityVersion = 1.8
 
     // Support Libraries
     const val googleServices = "15.0.1"
@@ -49,15 +49,15 @@ object Versions {
     const val okHttp = "3.10.0"
     const val okIo = "1.14.1"
     const val moshi = "1.8.0"
-    const val rxJava = "2.2.8"
-    const val rxKotlin = "2.3.0"
-    const val rxAndroid = "2.0.2"
-    const val rxBinding = "2.1.1"
+    const val rxJava = "2.2.12"
+    const val rxKotlin = "2.4.0"
+    const val rxAndroid = "2.1.1"
+    const val rxBinding = "3.0.0"
     const val rxFingerprint = "2.2.1"
 
     // Injection
-    const val dagger = "2.16"
-    const val koin = "2.0.0-rc-2"
+    const val dagger = "2.24"
+    const val koin = "2.0.1"
 
     // Utils
     const val commonsCodec = "1.3"
@@ -90,7 +90,6 @@ object Libraries {
     // Build tools and languages
     const val androidGradlePlugin = "com.android.tools.build:gradle:${Versions.androidPlugin}"
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
-    const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     const val kotlinAllOpen = "org.jetbrains.kotlin:kotlin-allopen:${Versions.kotlin}"
     const val coveralls = "org.kt3k.gradle.plugin:coveralls-gradle-plugin:${Versions.coveralls}"
     const val googleServicesPlugin = "com.google.gms:google-services:${Versions.googleServicesPlugin}"
@@ -128,7 +127,7 @@ object Libraries {
     const val firebaseMessaging = "com.google.firebase:firebase-messaging:${Versions.firebaseMessaging}"
     const val googlePlayServicesBase = "com.google.android.gms:play-services-base:${Versions.googleServices}"
 
-    // Networking, RxJava
+    // Networking
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitRxMoshiConverter = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
     const val retrofitRxJavaAdapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
@@ -138,11 +137,21 @@ object Libraries {
     const val moshi = "com.squareup.moshi:moshi:${Versions.moshi}"
     const val moshiKotlin = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
     const val moshiKotlinCodeGen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}"
+
+    // RxJava
     const val rxJava = "io.reactivex.rxjava2:rxjava:${Versions.rxJava}"
     const val rxKotlin = "io.reactivex.rxjava2:rxkotlin:${Versions.rxKotlin}"
     const val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid}"
-    const val rxBindingV4 = "com.jakewharton.rxbinding2:rxbinding-support-v4-kotlin:${Versions.rxBinding}"
-    const val rxBindingV7 = "com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:${Versions.rxBinding}"
+    const val rxBindingPlatform = "com.jakewharton.rxbinding3:rxbinding:${Versions.rxBinding}"
+    const val rxBindingMaterial =  "com.jakewharton.rxbinding3:rxbinding-material:${Versions.rxBinding}"
+    const val rxBindingCore =  "com.jakewharton.rxbinding3:rxbinding-core:${Versions.rxBinding}"
+    const val rxBindingAppCompat =  "com.jakewharton.rxbinding3:rxbinding-appcompat:${Versions.rxBinding}"
+    const val rxBindingDrawerlayout =  "com.jakewharton.rxbinding3:rxbinding-drawerlayout:${Versions.rxBinding}"
+    const val rxBindingRecyclerView =  "com.jakewharton.rxbinding3:rxbinding-recyclerview:${Versions.rxBinding}"
+    const val rxBindingSlidingPaneLayout = "com.jakewharton.rxbinding3:rxbinding-slidingpanelayout:${Versions.rxBinding}"
+    const val rxBindingSwipeRefreshLayout =  "com.jakewharton.rxbinding3:rxbinding-swiperefreshlayout:${Versions.rxBinding}"
+    const val rxBindingViewPager =  "com.jakewharton.rxbinding3:rxbinding-viewpager:${Versions.rxBinding}"
+
     const val rxFingerprint = "com.mtramin:rxfingerprint:${Versions.rxFingerprint}"
 
     // Injection

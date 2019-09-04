@@ -75,7 +75,7 @@ object Versions {
     // Testing
     const val mockito = "2.27.0"
     const val mockitoKotlin = "2.1.0"
-    const val kluent = "1.4"
+    const val kluent = "1.53"
     const val junit = "4.12"
     const val robolectric = "3.8"
     const val json = "20140107"
@@ -176,7 +176,7 @@ object Libraries {
     // Testing
     const val mockito = "org.mockito:mockito-core:${Versions.mockito}"
     const val mockitoKotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockitoKotlin}"
-    const val kluent = "org.amshove.kluent:kluent:${Versions.kluent}"
+    const val kluent = "org.amshove.kluent:kluent-android:${Versions.kluent}"
     const val kotlinJunit = "org.jetbrains.kotlin:kotlin-test-junit:${Versions.kotlin}"
     const val junit = "junit:junit:${Versions.junit}"
     const val robolectric = "org.robolectric:robolectric:${Versions.robolectric}"

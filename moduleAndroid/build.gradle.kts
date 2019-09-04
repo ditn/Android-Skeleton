@@ -12,7 +12,7 @@ dependencies {
     implementation(Libraries.rxJava)
 
     testImplementation(project(":testutils"))
-    testImplementation(project(":testutils-android"))
+    testImplementation(project(":testutilsandroid"))
     testImplementation(Libraries.kotlinJunit)
     testImplementation(Libraries.kluent)
     testImplementation(Libraries.mockitoKotlin)

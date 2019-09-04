@@ -1,4 +1,4 @@
-package com.adambennett.testutils.rxjava.lifecycle
+package com.adambennett.testutilsandroid.rxjava.lifecycle
 
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner

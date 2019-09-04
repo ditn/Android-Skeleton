@@ -26,7 +26,7 @@ dependencies {
     implementation(Libraries.ktxFragments)
 
     testImplementation(project(":testutils"))
-    testImplementation(project(":testutils-android"))
+    testImplementation(project(":testutilsandroid"))
     testImplementation(Libraries.kotlinJunit)
     testImplementation(Libraries.kluent)
     testImplementation(Libraries.mockitoKotlin)

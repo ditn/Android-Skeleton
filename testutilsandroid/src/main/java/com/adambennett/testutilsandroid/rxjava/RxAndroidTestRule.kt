@@ -1,5 +1,6 @@
-package com.adambennett.testutils.rxjava
+package com.adambennett.testutilsandroid.rxjava
 
+import com.adambennett.testutils.rxjava.RxInit
 import com.adambennett.testutils.testrules.after
 import com.adambennett.testutils.testrules.before
 import io.reactivex.Scheduler

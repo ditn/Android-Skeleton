@@ -1,12 +1,12 @@
-package com.adambennett.testutils.rxjava
+package com.adambennett.testutilsandroid.rxjava
 
 import com.adambennett.testutils.testrules.runRule
 import io.reactivex.android.plugins.RxAndroidPlugins
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import io.reactivex.schedulers.TestScheduler
-import org.amshove.kluent.`should be`
-import org.amshove.kluent.`should not be`
+import org.amshove.kluent.shouldBe
+import org.amshove.kluent.shouldNotBe
 import org.junit.Test
 
 class RxInitAndroidTest {
@@ -15,9 +15,9 @@ class RxInitAndroidTest {
     fun `can set io trampoline`() {
         rxInitAndroid { ioTrampoline() }
             .runRule {
-                Schedulers.io() `should be` Schedulers.trampoline()
+                Schedulers.io() shouldBe Schedulers.trampoline()
             }
-        Schedulers.io() `should not be` Schedulers.trampoline()
+        Schedulers.io() shouldNotBe Schedulers.trampoline()
     }
 
     @Test
@@ -26,18 +26,18 @@ class RxInitAndroidTest {
 
         rxInitAndroid { io(scheduler) }
             .runRule {
-                Schedulers.io() `should be` scheduler
+                Schedulers.io() shouldBe scheduler
             }
-        Schedulers.io() `should not be` scheduler
+        Schedulers.io() shouldNotBe scheduler
     }
 
     @Test
     fun `can set computation trampoline`() {
         rxInitAndroid { computationTrampoline() }
             .runRule {
-                Schedulers.computation() `should be` Schedulers.trampoline()
+                Schedulers.computation() shouldBe Schedulers.trampoline()
             }
-        Schedulers.computation() `should not be` Schedulers.trampoline()
+        Schedulers.computation() shouldNotBe Schedulers.trampoline()
     }
 
     @Test
@@ -46,18 +46,18 @@ class RxInitAndroidTest {
 
         rxInitAndroid { computation(scheduler) }
             .runRule {
-                Schedulers.computation() `should be` scheduler
+                Schedulers.computation() shouldBe scheduler
             }
-        Schedulers.computation() `should not be` scheduler
+        Schedulers.computation() shouldNotBe scheduler
     }
 
     @Test
     fun `can set single trampoline`() {
         rxInitAndroid { singleTrampoline() }
             .runRule {
-                Schedulers.single() `should be` Schedulers.trampoline()
+                Schedulers.single() shouldBe Schedulers.trampoline()
             }
-        Schedulers.single() `should not be` Schedulers.trampoline()
+        Schedulers.single() shouldNotBe Schedulers.trampoline()
     }
 
     @Test
@@ -66,16 +66,16 @@ class RxInitAndroidTest {
 
         rxInitAndroid { single(scheduler) }
             .runRule {
-                Schedulers.single() `should be` scheduler
+                Schedulers.single() shouldBe scheduler
             }
-        Schedulers.single() `should not be` scheduler
+        Schedulers.single() shouldNotBe scheduler
     }
 
     @Test
     fun `can set android main to trampoline`() {
         rxInitAndroid { mainTrampoline() }
             .runRule {
-                AndroidSchedulers.mainThread() `should be` Schedulers.trampoline()
+                AndroidSchedulers.mainThread() shouldBe Schedulers.trampoline()
             }
     }
 
@@ -87,18 +87,18 @@ class RxInitAndroidTest {
 
         rxInitAndroid { main(scheduler) }
             .runRule {
-                AndroidSchedulers.mainThread() `should be` scheduler
+                AndroidSchedulers.mainThread() shouldBe scheduler
             }
-        AndroidSchedulers.mainThread() `should not be` scheduler
+        AndroidSchedulers.mainThread() shouldNotBe scheduler
     }
 
     @Test
     fun `can set newThread trampoline`() {
         rxInitAndroid { newThreadTrampoline() }
             .runRule {
-                Schedulers.newThread() `should be` Schedulers.trampoline()
+                Schedulers.newThread() shouldBe Schedulers.trampoline()
             }
-        Schedulers.newThread() `should not be` Schedulers.trampoline()
+        Schedulers.newThread() shouldNotBe Schedulers.trampoline()
     }
 
     @Test
@@ -107,8 +107,8 @@ class RxInitAndroidTest {
 
         rxInitAndroid { newThread(scheduler) }
             .runRule {
-                Schedulers.newThread() `should be` scheduler
+                Schedulers.newThread() shouldBe scheduler
             }
-        Schedulers.newThread() `should not be` scheduler
+        Schedulers.newThread() shouldNotBe scheduler
     }
 }

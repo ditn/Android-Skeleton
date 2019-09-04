@@ -6,10 +6,6 @@ plugins {
 apply(from = "$rootDir/quality/ktlint.gradle.kts")
 
 android {
-    defaultConfig {
-        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
-        vectorDrawables.useSupportLibrary = true
-    }
     lintOptions {
         isAbortOnError = false
     }

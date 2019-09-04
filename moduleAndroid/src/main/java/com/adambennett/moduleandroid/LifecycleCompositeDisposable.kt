@@ -18,7 +18,6 @@ class LifecycleCompositeDisposable(
         lifecycleOwner.lifecycle.addObserver(this)
     }
 
-    @Suppress("unused")
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     private fun destroy() {
         compositeDisposable.clear()

@@ -5,16 +5,6 @@ plugins {
 }
 
 android {
-    compileSdkVersion(Versions.compileSdk)
-    defaultConfig {
-        applicationId = Versions.applicationId
-        minSdkVersion(Versions.minSdk)
-        targetSdkVersion(Versions.targetSdk)
-        versionCode = Versions.releaseCode
-        versionName = Versions.releaseName
-        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
-        vectorDrawables.useSupportLibrary = true
-    }
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false

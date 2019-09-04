@@ -6,18 +6,6 @@ plugins {
 
 apply(from = "$rootDir/quality/ktlint.gradle.kts")
 
-android {
-    compileSdkVersion(Versions.compileSdk)
-    defaultConfig {
-        minSdkVersion(Versions.minSdk)
-        targetSdkVersion(Versions.targetSdk)
-        versionCode = Versions.releaseCode
-        versionName = Versions.releaseName
-        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
-        vectorDrawables.useSupportLibrary = true
-    }
-}
-
 dependencies {
     implementation(Libraries.appCompat)
     implementation(Libraries.rxKotlin)

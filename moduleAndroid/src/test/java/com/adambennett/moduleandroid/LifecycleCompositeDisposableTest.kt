@@ -14,6 +14,7 @@ class LifecycleCompositeDisposableTest {
     @Test
     fun `can add subscriptions`() {
         val disposable: CompositeDisposable by LifecycleCompositeDisposable(lifeCycleOwner)
+
         disposable +=
             Observable.empty<Any>()
                 .subscribe()
@@ -24,6 +25,7 @@ class LifecycleCompositeDisposableTest {
     @Test
     fun `clears all subscriptions on lifecycle destroy`() {
         val disposable: CompositeDisposable by LifecycleCompositeDisposable(lifeCycleOwner)
+
         disposable +=
             Observable.empty<Any>()
                 .subscribe()

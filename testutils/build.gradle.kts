@@ -17,16 +17,16 @@ java {
 
 dependencies {
     // RxJava
-    implementation(Libraries.rxKotlin)
+    api(Libraries.rxKotlin)
     // Networking
     implementation(Libraries.okHttpMock)
-    implementation(Libraries.retrofit)
-    implementation(Libraries.moshi)
-    implementation(Libraries.retrofitRxMoshiConverter)
-    implementation(Libraries.retrofitRxJavaAdapter)
+    api(Libraries.retrofit)
+    api(Libraries.moshi)
+    api(Libraries.retrofitRxMoshiConverter)
+    api(Libraries.retrofitRxJavaAdapter)
     // Injection
-    implementation(Libraries.koinTest)
+    api(Libraries.koinTest)
     // Unit Test dependencies
-    implementation(Libraries.kotlinJunit)
-    implementation(Libraries.kluent)
+    api(Libraries.kotlinJunit)
+    api(Libraries.kluent)
 }

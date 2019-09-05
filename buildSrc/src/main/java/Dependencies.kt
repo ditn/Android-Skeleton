@@ -11,7 +11,7 @@ object Versions {
     const val releaseName = "0.0.1"
 
     // Build tools and languages
-    const val androidPlugin = "3.6.0-alpha09"
+    const val androidPlugin = "3.6.0-alpha10"
     const val kotlin = "1.3.50"
     const val googleServicesPlugin = "4.2.0"
     const val coveralls = "2.8.2"

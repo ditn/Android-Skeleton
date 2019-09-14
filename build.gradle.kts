@@ -68,6 +68,8 @@ fun AppExtension.applyCommons() {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    viewBinding.isEnabled = true
 }
 
 fun LibraryExtension.applyCommons() {
@@ -84,4 +86,6 @@ fun LibraryExtension.applyCommons() {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    viewBinding.isEnabled = true
 }

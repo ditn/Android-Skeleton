@@ -11,7 +11,7 @@ object Versions {
     const val releaseName = "0.0.1"
 
     // Build tools and languages
-    const val androidPlugin = "3.6.0-alpha10"
+    const val androidPlugin = "3.6.0-alpha11"
     const val kotlin = "1.3.50"
     const val googleServicesPlugin = "4.2.0"
     const val coveralls = "2.8.2"
@@ -28,7 +28,7 @@ object Versions {
     // AndroidX
     const val activity = "1.1.0-rc01"
     const val appCompat = "1.1.0-rc01"
-    const val design = "1.1.0-alpha05"
+    const val design = "1.1.0-alpha10"
     const val recyclerView = "1.0.0"
     const val cardView = "1.0.0"
     const val constraintLayout = "2.0.0-alpha2"

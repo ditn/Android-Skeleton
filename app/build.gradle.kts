@@ -22,6 +22,7 @@ dependencies {
     implementation(Libraries.appCompat)
     implementation(Libraries.constraintLayout)
     implementation(Libraries.lifecycleExtensions)
+    implementation(Libraries.lifecycleViewModelKtx)
     implementation(Libraries.ktxActivity)
     implementation(Libraries.ktxFragments)
 

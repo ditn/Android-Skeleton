@@ -11,7 +11,7 @@ object Versions {
     const val releaseName = "0.0.1"
 
     // Build tools and languages
-    const val androidPlugin = "3.6.0-alpha11"
+    const val androidPlugin = "3.6.0-alpha12"
     const val kotlin = "1.3.50"
     const val googleServicesPlugin = "4.2.0"
     const val coveralls = "2.8.2"
@@ -33,6 +33,7 @@ object Versions {
     const val cardView = "1.0.0"
     const val constraintLayout = "2.0.0-alpha2"
     const val lifecycle = "2.0.0-rc01"
+    const val lifecycleViewModelKtx = "2.1.0"
     const val annotations = "1.1.0-beta01"
     const val multidex = "2.0.0"
     const val dynamicAnims = "1.0.0"
@@ -110,6 +111,7 @@ object Libraries {
     // Lifecycle
     const val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
     const val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
+    const val lifecycleViewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleViewModelKtx}"
 
     // Room
     const val roomRx = "androidx.room:room-rxjava2:${Versions.room}"

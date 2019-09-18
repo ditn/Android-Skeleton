@@ -1,21 +1,20 @@
-package com.adambennett.template
+package com.adambennett.template.ui.main
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import com.adambennett.moduleandroid.AndroidModuleClass
 import com.adambennett.modulekotlin.KotlinModuleClass
+import com.adambennett.template.R
 import com.adambennett.template.databinding.ActivityMainBinding
-import com.adambennett.template.ui.main.MainFragment
+import com.adambennett.template.ui.BaseActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity<ActivityMainBinding>() {
 
-    private lateinit var binding: ActivityMainBinding
+    override val binding: ActivityMainBinding
+        get() = ActivityMainBinding.inflate(layoutInflater)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
 
         if (savedInstanceState == null) {
             supportFragmentManager.commit {

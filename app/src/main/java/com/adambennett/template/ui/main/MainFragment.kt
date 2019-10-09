@@ -1,22 +1,29 @@
 package com.adambennett.template.ui.main
 
-import android.os.Bundle
-import android.view.View
-import androidx.lifecycle.ViewModelProviders
+import android.content.Context
+import android.util.Log
+import androidx.fragment.app.viewModels
 import com.adambennett.template.databinding.FragmentMainBinding
 import com.adambennett.template.ui.BaseFragment
+import com.adambennett.template.di.ViewModelFactory
+import dagger.Lazy
+import dagger.android.support.AndroidSupportInjection
+import javax.inject.Inject
 
 class MainFragment : BaseFragment<FragmentMainBinding>() {
 
-    private lateinit var viewModel: MainViewModel
     override val binding: FragmentMainBinding
         get() = FragmentMainBinding.inflate(layoutInflater)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    @Inject
+    lateinit var factory: ViewModelFactory
 
-        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
-        // TODO: Use the ViewModel
+    private val viewModel: MainViewModel by viewModels(factoryProducer = { factory })
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+        viewModel.bind()
     }
 
     companion object {

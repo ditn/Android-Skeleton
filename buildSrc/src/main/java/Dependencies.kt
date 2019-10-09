@@ -32,7 +32,7 @@ object Versions {
     const val recyclerView = "1.0.0"
     const val cardView = "1.0.0"
     const val constraintLayout = "2.0.0-alpha2"
-    const val lifecycle = "2.0.0-rc01"
+    const val lifecycle = "2.2.0-alpha05"
     const val lifecycleViewModelKtx = "2.1.0"
     const val annotations = "1.1.0-beta01"
     const val multidex = "2.0.0"
@@ -43,7 +43,7 @@ object Versions {
     const val ktxCore = "1.1.0-alpha05"
     const val ktxFragments = "1.1.0-rc04"
     const val ktxActivity = "1.0.0-rc01"
-    const val ktxViewModel = "2.1.0-alpha04"
+    const val ktxViewModel = "2.2.0-alpha05"
 
     // Networking, RxJava
     const val retrofit = "2.4.0"
@@ -157,8 +157,10 @@ object Libraries {
     const val rxFingerprint = "com.mtramin:rxfingerprint:${Versions.rxFingerprint}"
 
     // Injection
-    const val dagger = "com.google.dagger:dagger:${Versions.dagger}"
-    const val daggerKapt = "com.google.dagger:dagger-compiler:${Versions.dagger}"
+    const val daggerAndroid = "com.google.dagger:dagger-android:${Versions.dagger}"
+    const val daggerAndroidSupport = "com.google.dagger:dagger-android-support:${Versions.dagger}"
+    const val daggerAndroidKapt = "com.google.dagger:dagger-android-processor:${Versions.dagger}"
+    const val daggerCompiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
     const val koin = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
     const val koinTest = "org.koin:koin-test:${Versions.koin}"
 

@@ -13,14 +13,14 @@ fun rxInitAndroid(block: RxInitAndroid.() -> Unit) =
         RxInitAndroid().also(block)
     } after {
         RxAndroidPlugins.reset()
-        RxAndroidPlugins.setMainThreadSchedulerHandler(null)
+        RxAndroidPlugins.setInitMainThreadSchedulerHandler(null)
         RxJavaPlugins.reset()
     }
 
 class RxInitAndroid : RxInit() {
 
     fun main(scheduler: Scheduler) {
-        RxAndroidPlugins.setMainThreadSchedulerHandler { scheduler }
+        RxAndroidPlugins.setInitMainThreadSchedulerHandler { scheduler }
     }
 
     fun mainTrampoline() {

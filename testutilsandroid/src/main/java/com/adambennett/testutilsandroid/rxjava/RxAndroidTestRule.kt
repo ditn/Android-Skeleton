@@ -20,7 +20,8 @@ fun rxInitAndroid(block: RxInitAndroid.() -> Unit) =
 class RxInitAndroid : RxInit() {
 
     fun main(scheduler: Scheduler) {
-        RxAndroidPlugins.setInitMainThreadSchedulerHandler { scheduler }
+        RxAndroidPlugins.setInitMainThreadSchedulerHandler { Schedulers.trampoline() }
+        RxAndroidPlugins.setMainThreadSchedulerHandler { scheduler }
     }
 
     fun mainTrampoline() {

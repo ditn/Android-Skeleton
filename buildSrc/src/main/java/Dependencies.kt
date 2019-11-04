@@ -1,5 +1,3 @@
-@file:Suppress("unused")
-
 object Versions {
 
     // Release info
@@ -16,8 +14,8 @@ object Versions {
     const val googleServicesPlugin = "4.2.0"
     const val coveralls = "2.8.2"
     const val buildProperties = "0.4"
-    const val ktlint = "0.34.0"
-    const val kotlinJvmTarget = "1.6"
+    const val ktlint = "0.35.0"
+    const val kotlinJvmTarget = "1.8"
     const val javaCompatibilityVersion = 1.8
 
     // Support Libraries

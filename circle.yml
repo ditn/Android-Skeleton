@@ -1,77 +1,106 @@
 version: 2
+
+workspace: &workspace
+   ~/Android-Skeleton
+
+config_android: &config_android
+  docker:
+    - image: circleci/android:api-29
+  working_directory: *workspace
+  environment:
+    JAVA_TOOL_OPTIONS: "-Xmx1536m"
+    GRADLE_OPTS: "-Dorg.gradle.daemon=false -Dorg.gradle.workers.max=2 -Dkotlin.incremental=false -Dkotlin.compiler.execution.strategy=in-process"
+    TERM: dumb
+
+update_sdk: &update_sdk
+  run:
+    name: Update SDK
+    command: |
+      yes | sdkmanager --licenses || true
+      sdkmanager "platform-tools" "platforms;android-29"
+gen_cache_key: &gen_cache_key
+  run:
+    name: Generate cache key
+    command: ./checksum.sh /tmp/checksum.txt
+
+restore_cache: &restore_cache
+  restore_cache:
+    key: gradle-{{ checksum "/tmp/checksum.txt" }}
+
+save_cache: &save_cache
+  save_cache:
+    paths:
+      - ~/.gradle/caches
+      - ~/.gradle/wrapper
+    key: gradle-{{ checksum "/tmp/checksum.txt" }}
+
+attach_workspace: &attach_workspace
+  attach_workspace:
+    at: *workspace
+
+persist_workspace: &persist_workspace
+  persist_to_workspace:
+    root: *workspace
+    paths:
+      - ./*/build
+
 jobs:
   build:
-    docker:
-      - image: circleci/android:api-29
-    environment:
-      _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap
+    <<: *config_android
     steps:
+      - <<: *update_sdk
       - checkout
-      - restore_cache:
-          keys:
-            - gradle-{{ checksum "build.gradle.kts" }}-{{ checksum "app/build.gradle.kts" }}
-            - gradle-
-            - android-cache-
-
+      - <<: *gen_cache_key
+      - <<: *restore_cache
       - run:
-          name: Start Gradle Daemon
-          command: nohup ./gradlew
-
+          name: Download Dependencies
+          command: ./gradlew dependencies
       - run:
-          name: Build Project
+          name: Assemble
           command: bash ./scripts/ci_assemble.sh
-
-      - save_cache:
-          paths:
-            - ~/.gradle
-          key: gradle-{{ checksum "build.gradle.kts" }}-{{ checksum "app/build.gradle.kts" }}
-
-      - save_cache:
-          key: android-cache-{{ epoch }}
-          paths:
-            - ~/.android/build-cache
-            - ~/.android/cache
-            -
+      - <<: *save_cache
+      - store_artifacts:
+          path: app/build/outputs
+          destination: outputs
+      - <<: *persist_workspace
 
   check:
-    docker:
-      - image: circleci/android:api-29
-    environment:
-      _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap
+    <<: *config_android
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - gradle-{{ checksum "build.gradle.kts" }}-{{ checksum "app/build.gradle.kts" }}
-            - gradle-
-            - android-cache-
-
+      - <<: *gen_cache_key
+      - <<: *restore_cache
       - run:
           name: Run Quality Checks
           command: bash ./scripts/ci_quality.sh
 
   test:
-    docker:
-      - image: circleci/android:api-29
-    environment:
-      _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap
+    <<: *config_android
     steps:
+      - <<: *update_sdk
       - checkout
-      - restore_cache:
-          keys:
-            - gradle-{{ checksum "build.gradle.kts" }}-{{ checksum "app/build.gradle.kts" }}
-            - gradle-
-            - android-cache-
-
+      - <<: *attach_workspace
+      - <<: *gen_cache_key
+      - <<: *restore_cache
       - run:
-          name: Run Unit Tests
+          name: Test app and dependencies
           command: bash ./scripts/ci_test.sh
-
       - store_artifacts:
           path: app/build/reports
-          destination: Test Reports
+          destination: reports
+      - store_artifacts:
+          path: build/dependencyUpdates
+          destination: dependencyUpdates
+      - run:
+          name: Save test results
+          command: |
+            mkdir -p ~/junit/
+            find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} ~/junit/ \;
+          when: always
       - store_test_results:
-          path: build/test-results
+          path: ~/junit
+      - store_artifacts:
+          path: ~/junit
 
 workflows:
   version: 2

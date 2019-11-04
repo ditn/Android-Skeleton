@@ -21,7 +21,7 @@ update_sdk: &update_sdk
 gen_cache_key: &gen_cache_key
   run:
     name: Generate cache key
-    command: ./scripts/checksum.sh /tmp/checksum.txt
+    command: ./scripts/ci_checksum.sh /tmp/checksum.txt
 
 restore_cache: &restore_cache
   restore_cache:

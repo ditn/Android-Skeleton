@@ -106,10 +106,10 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - check
-      - build:
+      - build
+      - check:
           requires:
-            - check
+            - build
       - test:
           requires:
             - build
